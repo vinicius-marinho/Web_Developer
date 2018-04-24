@@ -1,23 +1,21 @@
 from urllib.request import urlopen
-from urllib.request import Request
 from urllib.parse import urlencode
+
 
 def read_text():
     quotes = open("C:\\Users\\Windows\\Desktop\\Udacity_web_Developer\\movies_quotes.txt")
     contents = quotes.read()
-    print(contents)
     quotes.close()
-    check_profanity()
+    check_profanity(contents)
 
-def check_profanity():
-    url = "http://www.wdylike.appspot.com/?q="
-    valor = urlencode("Shit")
-    valor = valor.encode('utf-8')
-    connection = Request(url,valor)
-    html = urlopen(connection)
-    the_page = html.read()
-    print(the_page)
-
+def check_profanity(texto):
+    params = urlencode({'q': texto})
+    url = urlopen("http://www.wdylike.appspot.com/?" + params)
+    output = url.read()
+    if output:
+        print("Melhor consertar esse texto ai")
+    else:
+        print("Pode mandar o e-mail")
 
 read_text()
 
