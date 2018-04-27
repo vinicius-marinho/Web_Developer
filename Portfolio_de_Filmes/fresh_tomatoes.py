@@ -36,12 +36,12 @@ main_page_head = '''
             height: 100%;
         }
         .movie-tile {
-            margin-bottom: 20px;
-            padding-top: 20px;
+            margin-bottom: 9px;
+            padding-top: 15px;
         }
         .movie-tile:hover {
-            background-color: #EEE;
-            cursor: pointer;
+            background-color: #FFF;
+            cursor: arrow;
         }
         .scale-media {
             padding-bottom: 56.25%;

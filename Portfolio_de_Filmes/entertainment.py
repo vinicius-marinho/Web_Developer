@@ -22,7 +22,8 @@ Superman = media.Movie("Homem de Aco", "Clark Kent se tranforma no superman",
                        "https://www.youtube.com/watch?v=Bgi8Ud7IJJ4")
 movies = [Toy_story, Wick, King_lion, Cap_2, Superman]
 
-# fresh_tomatoes.open_movies_page(movies)
+fresh_tomatoes.open_movies_page(movies)
+
+
 # print(media.Movie.VALID_RATINGS)
 
-print(media.Movie.__module__)

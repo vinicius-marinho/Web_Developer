@@ -16,7 +16,7 @@ class Carro(Veiculo): # Classe filha Carro herda da classe pai Veiculo
         self.cor = cor #variavel apenas da classe filha
 
     def show_info(self):
-        
+
         print("Cor do carro: " + self.cor)
 
 
