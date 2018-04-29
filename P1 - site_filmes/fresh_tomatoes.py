@@ -23,7 +23,7 @@ main_page_head = '''
             background: url(https://images.unsplash.com/photo-1515469796227-05ae4d8241a5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=aebcdad248e83a31bfd460d55d522e91&auto=format&fit=crop&w=1050&q=80);
             background-repeat: no-repeat;
             background-size: cover;
-	        background-position: center;
+            background-position: center;
         }
         #trailer .modal-dialog {
             margin-top: 200px;
@@ -153,6 +153,7 @@ def create_movie_tiles_content(movies):
         # Append the tile for the movie with its content filled in
         content += movie_tile_content.format(
             movie_title=movie.title,
+            storyline=movie.storyline,
             poster_image_url=movie.poster_image_url,
             trailer_youtube_id=trailer_youtube_id
         )
