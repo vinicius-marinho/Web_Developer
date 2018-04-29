@@ -1,8 +1,7 @@
-# importando os modulos que contem a classe(media) e o arquivo fresh_tomatoes
 import media
 import fresh_tomatoes
 
-# Criando os objetos da classe media. Aqui crio os objetos dos meus filmes favoritos
+# Nas linhas abaixos, objetos contendo as informacoes dos filmes sao criados
 Toy_story = media.Movie("Toy Story 3",
                         "Os brinquedos tentam escapar de uma enrascada",
                         "https://images-na.ssl-images-amazon.com/images/I/519fFTj6QnL._SY450_.jpg",
@@ -16,7 +15,7 @@ Wick = media.Movie("John Wick",
 King_lion = media.Movie("Rei Leao",
                         "Historia de Simba, e de como ele se tornou rei",
                         "https://img.elo7.com.br/product/original/146CF3B/o-rei-leao-poster-arte.jpg",
-                        "https://www.youtube.com/watch?v=pY9P04JhdFk")
+                        "https://www.youtube.com/watch?v=OH_9AdaxtfE")
 
 Cap_2 = media.Movie("Capitao America 2 - O Soldado Invernal",
                     "Capitao America enfrenta a Hydra e descobre o Soldado Invernal",
@@ -33,12 +32,8 @@ Up = media.Movie("Up Altas Aventuras",
                  "https://http2.mlstatic.com/poster-up-altas-aventuras-5-D_NQ_NP_13929-MLB140510878_1195-O.jpg",
                  "https://www.youtube.com/watch?v=yADAYe9efE0")
 
-# Crio uma lista onde coloco todos os meus objetos
+# Os objetos criados sao em uma lista para que possam popular a pagina web.
 movies = [Toy_story, Wick, King_lion, Cap_2, Superman, Up]
 
-# Chamo a funcao open_movie_page passando como argumento a minha lista. Essa funcao gera a pagina html.
+# A funcao abaixo gera a pagina html, tendo como argumento a lista criada acima
 fresh_tomatoes.open_movies_page(movies)
-
-
-
-
