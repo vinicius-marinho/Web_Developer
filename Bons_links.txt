@@ -1,0 +1,8 @@
+http://pep8online.com == checa o estilo pep8 de um código python
+
+https://dillinger.io/ == checa o markdown
+
+CSS
+
+https://css-tricks.com/almanac/
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
