@@ -1,0 +1,49 @@
+Usando o sqlite
+
+Uso o .headers on para mostrar os cabeçalhos das tabelas
+
+Criando uma tabela = create table (nome_tabela) (nome_campo tipo(text|integer|...), nome_campo tipo(text|integer|...));
+
+Ex.:create table contacts (name text, phone integer, email text);
+
+Adicionando uma linha na tabela: insert into (nome_tabela) (colunas) values(valores)
+
+Ex.:
+insert into contacts (name, phone, email) values('Alice', 34567, 'alice@alice.com');
+
+Posso adicionar campos específicos usando:
+
+insert into contacts (name, phone) values('Alice', 34567);
+
+Se for usar todos os campos, não preciso colocar os campos deles:
+
+insert into contacts values('Alice', 34567, 'alice@alice.com');
+
+
+Antes de realizar qualquer update, é uma boa fazer um backup do banco através do = .backup (nome_qualquer)
+
+Caso dê merda pode voltar o backup usando = .restore (nome_backup)
+
+Para fazer um update em uma única linha, usar = update contacts set (valor a ser alterado) where (parametro);
+Eu pego um valor de uma determinada linha e uso como referencia para alteração apenas do campo dessa linha.
+
+Ex.:
+
+update contacts set email="teste@teste.com" where name="Carol";
+
+
+Para deletar campos/linhas = delete from contacts where (valor a ser alterado);
+
+Ex.:
+
+delete from contacts where phone=893573 and name="Alice";
+
+Quando realizar uma query e quiser que ela seja case insensitive, uso o: COLLATE NOCASE
+
+Ex.:
+
+select * from albums order by artist, name COLLATE NOCASE;
+
+Exemplo de uso do Join:
+
+select songs.track, songs.title, albums.name from songs join albums on songs.album = albums._id;
