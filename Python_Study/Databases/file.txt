@@ -47,3 +47,26 @@ select * from albums order by artist, name COLLATE NOCASE;
 Exemplo de uso do Join:
 
 select songs.track, songs.title, albums.name from songs join albums on songs.album = albums._id;
+
+Join com Order BY:
+
+select albums.name, songs.track, songs.title from songs inner join albums on songs.album = albums._id order by albums.name, songs.track;
+
+Buscando por padrões de nomes usando o like:
+
+select artists.name, albums.name, songs.track, songs.title from songs join albums on albums._id = songs.album join artists on artists._id = albums.artist where albums.name like "%Mesca%" order by artists.name, albums.name, songs.track;
+
+
+Posso criar uma view, que é uma tabela para visualização que pode ser criada a partir de uma query. Ex.:
+
+CREATE VIEW artist_list as select artists.name, albums.name, songs.track, songs.title from songs join albums on albums._id = songs.album join artists on artists._id = albums.artist order by artists.name, albums.name, songs.track;
+
+Para apagar uma view/tabela:
+
+drop view <view/tabela>;
+
+Apagando um valor de uma tabela:
+
+delete from <tabela> where <valor>;
+
+Os arquivos .py nesse diretório mostram como usar o sqlite com o python. Como realizar conexão, updates, querys e etc.
