@@ -17,3 +17,9 @@ https://css-tricks.com/almanac/
 https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
 https://developer.mozilla.org/pt-BR/docs/Web/CSS/box_model == guia sobre box-model
 
+<<<<<<< HEAD
+Ferramentas de Developer
+
+https://developers.google.com/web/tools/chrome-devtools/shortcuts?utm_source=dcc&utm_medium=redirect&utm_campaign=2016q3
+=======
+>>>>>>> f21004417b95181a71be316d6947ecf32d6a4828
