@@ -70,3 +70,20 @@ Apagando um valor de uma tabela:
 delete from <tabela> where <valor>;
 
 Os arquivos .py nesse diretório mostram como usar o sqlite com o python. Como realizar conexão, updates, querys e etc.
+
+Ex.:
+
+import sqlite3
+
+db = sqlite3.connect("nome_banco.sqlite")
+cursor = db.cursor() // serve para movimentar o cursor no banco
+
+db.execute("comando a ser executado")
+
+db.commit() // salva mudanças
+
+
+sql injection = injeção de comandos sql por um atacante dentro de uma query. Problema seríssimo que pode me fazer perder,
+todo o meu banco de dados.
+
+Não usar o executescript, para evitar injection de comandos inapropriados.

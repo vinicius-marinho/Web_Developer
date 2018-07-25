@@ -1,6 +1,6 @@
 from player import Player
 from enemy import Enemy, Troll, Vampyre, VampyreKing
-
+import ducks
 # tim = Player("Tim")
 #
 # random_monster = Enemy("Basic Enemy", 12, 1)
